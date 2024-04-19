@@ -1,0 +1,18 @@
+<label for="search-q">Search pokemons:</label>
+<input id="search-q" [formControl]="searchQ">
+
+<div class="horizontal">
+    <div class="button" (click)="decrementPage()">
+        <p>Previous page</p>
+    </div>
+    <div class="list">
+        @for(pokemon of visibleFilteredPokemons; track pokemon.name; let idx = $index){
+        <div (click)="onRowClick(pokemon)" class="row" [style.background]="getRandomBg(idx)">{{pokemon.name}}
+            {{pokemon.url}}</div>
+        }
+    </div>
+    <div class="button" (click)="incrementPage()">
+        <p>Next page</p>
+    </div>
+    <app-poke-avatar></app-poke-avatar>
+</div>

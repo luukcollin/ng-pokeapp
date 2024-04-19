@@ -1,0 +1,39 @@
+.horizontal {
+    display: flex;
+}
+
+.list {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.row {
+    cursor: pointer;
+    padding: .3em;
+    margin: .1em;
+    border: 1px solid black;
+}
+
+.button {
+    cursor: pointer;
+    display: flex;
+    width: 1em;
+    height: 1em;
+    padding: 1.5em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    color: whitesmoke;
+
+    border-radius: 100%;
+    border: 1px solid white;
+
+    &:hover {
+        opacity: .81;
+        border: 1px solid black;
+    }
+}
